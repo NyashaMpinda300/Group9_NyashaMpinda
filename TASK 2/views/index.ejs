@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+
+    <!-- <h1><%=data1[0].label%></h1> -->
+
+    <canvas id="myChart" style="width:50%;max-width:400px"></canvas>
+    <canvas id="myChart2" style="width:50%;max-width:400px"></canvas>
+    <canvas id="myChart3" style="width:50%;max-width:400px"></canvas>
+
+    <script>
+      var xValues = [
+                '<%= data[0].month %>',
+                '<%= data[1].month %>',
+                '<%= data[2].month %>',
+                '<%= data[3].month %>',
+                '<%= data[4].month %>',
+                '<%= data[5].month %>',
+                '<%= data[6].month %>',
+                '<%= data[7].month %>',
+                '<%= data[8].month %>',
+                '<%= data[9].month %>',
+                '<%= data[10].month %>',
+                '<%= data[11].month %>'
+            ];
+var yValues = ['<%= data[0].rainfall %>',
+                '<%= data[1].rainfall %>',
+                '<%= data[2].rainfall %>',
+                '<%= data[3].rainfall %>',
+                '<%= data[4].rainfall %>',
+                '<%= data[5].rainfall %>',
+                '<%= data[6].rainfall %>',
+                '<%= data[7].rainfall %>',
+                '<%= data[8].rainfall %>',
+                '<%= data[9].rainfall %>',
+                '<%= data[10].rainfall %>',
+                '<%= data[11].rainfall %>'];
+
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "RAINFALL DATA"
+    }
+  }
+});
+
+
+var xValues = [
+  '<%= data1[0].label %>',
+  '<%= data1[1].label %>',
+  '<%= data1[2].label %>',
+  '<%= data1[3].label %>',
+  '<%= data1[4].label %>'
+
+];
+var yValues = [
+'<%= data1[0].value %>',
+'<%= data1[1].value %>',
+'<%= data1[2].value %>',
+'<%= data1[3].value %>',
+'<%= data1[4].value %>'
+];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart2", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "expensesData"
+    }
+  }
+});
+
+
+var xValues = [
+'<%= data2[0].label %>',
+  '<%= data2[1].label %>',
+  '<%= data2[2].label %>',
+  '<%= data2[3].label %>'
+
+];
+var yValues = [
+'<%= data2[0].value %>',
+  '<%= data2[1].value %>',
+  '<%= data2[2].value %>',
+  '<%= data2[3].value %>'
+];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart3", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Top Ranked Programming Languages"
+    }
+  }
+});
+
+
+
+
+
+    </script>
+   
+ 
+
+    
+</body>
+</html>

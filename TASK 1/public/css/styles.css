@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation{
+    background-color: rgba(67,55,157,255);
+    width: 15vw;
+    height: 100vh;
+    color: rgba(128,133,208,255);
+}
+
+.navigation a{
+    text-decoration: none;
+    color: rgba(128,133,208,255);
+}
+
+.link {
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    width: 80%;
+}
+
+.link a {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.link, .workflow {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.link:hover{
+    background-color: rgba(54,47,120,255);
+    border-radius: 0.5rem;
+    
+    
+}
+
+.link a:hover {
+    color: white;
+}
+
+
+.border{
+
+    border: 4px dotted #bfc1cc;
+    width: 80vw;
+    height: 60vh;
+    border-radius: 1rem;
+
+}
+
+.content{
+   
+    background-color: rgba(244,245,247,255);
+    height: 86vh;
+    width: 85vw;
+    padding-left: 1.5rem;
+    padding-top: 2rem;
+    
+    
+}
+
+.header{
+
+    height: 7vh;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    padding: 0.5rem;
+
+
+}
+
+
+.search{
+    width: 75vw;
+    /* height: 5vh;
+    border: none;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2); */
+    border: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    font-size: larger;
+
+}
