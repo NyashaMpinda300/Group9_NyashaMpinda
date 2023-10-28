@@ -1,0 +1,50 @@
+
+<style>
+    .options a {
+        text-decoration: none;
+        background-color: #2e045e;
+        color: white;
+        font-weight: 600;
+        padding: 1em 2em;
+        font-size: 0.85em;
+    }
+</style>
+
+
+<header>
+    <div class="title"><h2>GRADES</h2></div>
+    <div class="options">
+        <a href="/updateGrade">UPDATE GRADES</a>
+        <a href="/delete">DELETE GRADES</a>
+    </div>
+</header>
+<div class="container-large">
+    <!-- Grade Entry Form -->
+    <form action="/EnterResults" method="post" style="margin-top: 2em;">
+        <!-- <h2>Grade Entry</h2> -->
+        <div class="container-details">
+            <div class="input-container">
+                <label for="student_id_grade">Student ID:</label>
+                <input type="text" id="student_id" name="student_id" required> 
+            </div>
+
+            <div class="input-container">
+                <label for="course">Module:</label>
+                <input type="text" id="course" name="course" required> 
+            </div>
+            
+            <div class="input-container">
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" name="grade" required> 
+            </div>
+            <div class="input-container">
+                <Label>Comments</Label>
+                <input type="text" name="comment" id="body">
+                <!-- Submit Grade Entry Button -->
+                <input type="submit" value="Enter Grade" class="submit"> 
+            </div>
+        </div>
+    </form>
+</div>
+
+

@@ -1,0 +1,246 @@
+input, textarea, button, select {
+    font-family: inter, sans-serif;
+}
+
+.container-large {
+    width: 100%;
+    margin-left: auto;
+}
+
+.container-large h1 {
+    font-size: 1em;
+    background-color: rgb(34, 1, 56);
+    color: white;
+    padding: 0.9em 1.95em;
+    margin: 0;
+    width: fit-content;
+}
+
+/* Tab styling */
+.tabs {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: #9f5ee9;
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 0.5em;
+    width: 25%;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(218, 175, 231);
+}
+
+.tab-btn:last-child {
+    border: none;
+}
+
+/* Initially hide all tab content */
+.tab-content {
+    display: none;
+}
+
+/* Show the active tab content */
+.tab-content.active {
+    display: block;
+}
+
+.tab-content > h2 {
+    font-size: 1.2em;
+}
+
+input, textarea, select {
+    outline: none;
+    border: 1px solid black;
+    padding: 0.9em 1em;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+input:hover, textarea:hover, select:hover {
+    border-color: #5c1ea3;
+}
+
+input:focus, textarea:focus {
+    border-color: #8c45df;
+}
+
+.container-details {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-inline: 0.2em;
+    padding: 1em 2em;
+    background-color: #f9f5fc;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* Style the custom select container */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 170px; /* Adjust the width as needed */
+    background-color: #f5f5f5; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* Hide the default dropdown arrow */
+}
+
+/* Style the select element inside the custom container */
+.custom-select select {
+    width: 100%;
+    padding: 0.8em 1em;
+    background: transparent; /* Make the background transparent */
+    border: none;
+    appearance: none; /* Remove default styles on some browsers */
+    cursor: pointer;
+}
+
+/* Style the custom dropdown arrow */
+.custom-select::after {
+    content: '\25BC'; /* Unicode character for a down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't interfere with clicks */
+}
+
+label {
+    font-size: 0.85em;
+}
+
+.submit {
+    background-color: #9334ff;
+    color: white;
+    padding: 1.2em 3em;
+    outline: none;
+    border: none;
+    font-weight: 600;
+}
+
+aside {
+    width: 20%;
+    height: 100vh;
+}
+
+.header-logo {
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    padding-left: 2em;
+    display: flex;
+    gap: 0.3em;
+    padding-block: 1em;
+    border: 1px solid rgb(193, 177, 252);
+    background-color: #f8f1ff;
+}
+
+.header-logo h2 {
+    margin-block: auto;
+    line-height: 1em;
+    font-size: 1em;
+    color: #5c1ea3;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.sidebar-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 86%;
+    background-color: #5c1ea3;
+}
+
+.sidebar-tabs button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.397);
+    margin: 0em 0.5em;
+    color: white;
+    padding: 1.2em 1em;
+    text-align: left;
+    width: 80%;
+    margin-inline: auto;
+    font-size: 0.85em;
+    display: flex;
+    gap: 0.4em;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-tabs button:hover {
+    background-color: #4c1191;
+    cursor: pointer;
+}
+
+.tabs-bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+main {
+    margin-left: auto;
+    width: 79%;
+    height: 100vh;
+}
+
+header {
+    background-color: #f7f2fc;
+    padding: 0.85em 2em;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+header h2 {
+    font-weight: 700;
+    color: #1a0136;
+    font-size: 1.2em;
+}
+
+.options {
+    margin-left: auto;
+}
+
+.options button {
+    background-color: #1a0136;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+}
+
+#registerStudent {
+    display: none;
+}
+
+#enterResults {
+    display: none;
+}
+

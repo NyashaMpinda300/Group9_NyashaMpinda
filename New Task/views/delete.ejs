@@ -1,0 +1,57 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Delete Grade</title>
+</head>
+
+<div class="container-large" style="font-family: inter;">
+    <h1 class="delete-header">Delete Grade</h1>
+    <form action="/delete" method="POST">
+        <label for="student_id_grade">Student ID:</label>
+
+        <select id="student_id_grade" name="student_id_grade" required>
+            <!-- Populate dropdown options dynamically using JavaScript -->
+            <option value="" disabled selected>Select Student ID</option>
+            <!-- Split the data2 string by comma and create options -->
+            <script>
+                var data2 = '<%=data2%>';
+                var studentIDs = data2.split(',');
+                var selectElement = document.getElementById("student_id_grade");
+
+                for (var i = 0; i < studentIDs.length; i++) {
+                    var option = document.createElement("option");
+                    option.value = studentIDs[i];
+                    option.text = studentIDs[i];
+                    selectElement.appendChild(option);
+                }
+            </script>
+        </select><br>
+
+        <!-- Module (Dropdown) -->
+        <label for="module">Module:</label>
+        <select id="module" name="module" required>
+            <option value="" disabled selected>Select Module</option>
+            <!-- Split the subjects string by comma and create options -->
+            <script>
+                var subjectsData = '<%=subjects%>';
+                var subjects = subjectsData.split(',');
+                var selectElement = document.getElementById("module");
+
+                for (var i = 0; i < subjects.length; i++) {
+                    var option = document.createElement("option");
+                    option.value = subjects[i];
+                    option.text = subjects[i];
+                    selectElement.appendChild(option);
+                }
+            </script>
+        </select><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Delete Grade">
+    </form>
+</div>

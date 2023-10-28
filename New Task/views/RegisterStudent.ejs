@@ -1,0 +1,181 @@
+
+<style>
+    .options a {
+        text-decoration: none;
+        background-color: #2e045e;
+        color: white;
+        font-weight: 600;
+        padding: 1em 2em;
+        font-size: 0.85em;
+    }
+</style>
+
+
+<header>
+    <div class="title"><h2>STUDENTS</h2></div>
+    <div class="options">
+        <a href="/students">VIEW STUDENTS</a>
+        <a href="/update">UPDATE STUDENT INFO</a>
+        <a href="/summary">STUDENT GRADES SUMMARY</a>
+    </div>
+</header>
+<div class="container-large">
+    <!-- <h1>Student Registration Form</h1> -->
+    <div class="tabs">
+        <button class="tab-btn" data-tab="personal">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+            </svg>
+            Personal Information
+        </button>
+        <button class="tab-btn" data-tab="contact">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-address-book" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z"></path>
+                <path d="M10 16h6"></path>
+                <path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                <path d="M4 8h3"></path>
+                <path d="M4 12h3"></path>
+                <path d="M4 16h3"></path>
+            </svg>
+             Contact Information
+        </button>
+        <button class="tab-btn" data-tab="address">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+            </svg>
+            Address Information
+        </button>
+        <button class="tab-btn" data-tab="academic">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+            </svg>
+            Academic Information
+        </button>
+    </div>
+    <form action="/register" method="post">
+        <div id="personal" class="tab-content">
+            <!-- Personal Information -->
+            
+            <div class="container-details">
+                <div class="input-container">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" required><br>
+                </div>
+        
+                <div class="input-container">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="date_of_birth">Date of Birth:</label>
+                    <input type="date" id="date_of_birth" name="date_of_birth" required>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div id="contact" class="tab-content">
+            <!-- Contact Information -->
+            <div class="container-details">
+                <div class="input-container">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+            </div>
+        </div>
+        
+        <div id="address" class="tab-content">
+            <!-- Address Information -->
+            
+            <div class="container-details">
+                <div class="input-container">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="zip_code">Zip Code:</label>
+                    <input type="text" id="zip_code" name="zip_code" required>
+                </div>
+            </div>
+        </div>
+        
+        <div id="academic" class="tab-content">
+            <!-- Academic Information -->
+           
+            <div class="container-details">
+                <div class="input-container">
+                    <label for="student_id">Student ID:</label>
+                    <input type="text" id="student_id" name="student_id" required>
+                    
+                </div>
+                
+                <div class="input-container">
+                    <label for="major">Major:</label>
+                    <input type="text" id="major" name="major" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="enrollment_year">Enrollment Year:</label>
+                    <input type="number" id="enrollment_year" name="enrollment_year" required>
+                </div>
+                <button type="submit" class="submit">SUBMIT</button>
+                
+            </div>
+        </div>
+        
+        
+        <!-- Submit Button -->
+        
+    </form>
+</div>
+<script>
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+            tabContents.forEach((content) => {
+                if (content.id === tabId) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+
+            // Change the background color of the clicked button
+            tabButtons.forEach((btn) => {
+                if (btn === button) {
+                    btn.style.backgroundColor = '#6f33b3'; // Change to the desired color
+                } else {
+                    btn.style.backgroundColor = ''; // Reset background color for other buttons
+                }
+            });
+        });
+    });
+</script>

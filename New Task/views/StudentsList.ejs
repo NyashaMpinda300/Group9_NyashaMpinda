@@ -1,0 +1,71 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<table style="font-family: inter, sans-serif;">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Major</th>
+            <th>Enrollment Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% students.forEach(student => { %>
+            <tr>
+                <td><%= student.studentID %></td>
+                <td><%= student.firstname %></td>
+                <td><%= student.lastname %></td>
+                <td><%= student['D.O.B'] %></td>
+                <td><%= student.email %></td>
+                <td><%= student.phone %></td>
+                <td><%= student.city %></td>
+                <td><%= student.major %></td>
+                <td><%= student['enrollment year'] %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<style>
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #5c01c5;
+    color: white;
+}
+
+th, td {
+    font-size: 0.8em;
+}
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+</style>
